@@ -92,8 +92,8 @@ let opcion= prompt("Ingrese el Departamento del Trabajador del que es usted y le
 
         opcion= prompt("Ingrese el Departamento del Trabajador del que es usted y le decimos el monto a cobrar, 'A', 'B', 'C', 'D' o ingrese 'SALIR' para finalizar")
 }
-*/
 
+*/
 /*
 6) Escribir una función que reciba 2 números como parámetros y devuelva:
 a) Si el primer número es mayor que el segundo, devuelva 1
@@ -133,7 +133,7 @@ console.log (numeros(numero1, numero2))
 multiplicación desde 1 hasta 10.
 */
 
-
+/*
 const numero = parseInt(prompt("Ingresar Numero"))
 
 
@@ -146,3 +146,42 @@ function multiplicación (numero){
 
 multiplicación(numero)
 
+*/
+
+
+
+
+/**2. Dado el siguiente array
+a. Se pide primero obtener todas las personas del género femenino (genero
+= “F”)
+b. Una vez obtenidas, se pide calcular el promedio de edad sobre ellas
+const listaPersonas = [
+ { nombre: "Matias", genero: "M", edad: 25 },
+ { nombre: "Fernanda", genero: "F", edad: 27 },
+ { nombre: "Federico", genero: "M", edad: 32 },
+ { nombre: "Camila", genero: "F", edad: 12 },
+ { nombre: "Gabriela", genero: "F", edad: 42 },
+]; */
+
+const listaPersonas = [
+    { nombre: "Matias", genero: "M", edad: 25 },
+    { nombre: "Fernanda", genero: "F", edad: 27 },
+    { nombre: "Federico", genero: "M", edad: 32 },
+    { nombre: "Camila", genero: "F", edad: 12 },
+    { nombre: "Gabriela", genero: "F", edad: 42 },
+];
+
+
+const personasFemeninas = listaPersonas.filter((el) => {
+    return el.genero === "F" ;
+})
+
+const sumatoria =  personasFemeninas.reduce((acc, el)=> acc + el.edad, 0)
+
+const promedio = sumatoria / personasFemeninas.length
+
+
+
+console.log(personasFemeninas)
+
+console.log(promedio)
